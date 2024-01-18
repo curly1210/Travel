@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel</title>
+
+    <!-- css file link -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!--  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- header section starts -->
+
+    <header class="header">
+      <a href="#" class="logo"
+        ><i class="fa-solid fa-person-hiking"></i> travel.</a
+      >
+      <nav class="navbar">
+        <div class="fas fa-times" id="nav-close"></div>
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#shop">shop</a>
+        <a href="#packages">packages</a>
+        <a href="#reviews">reviews</a>
+        <a href="#blogs">blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div class="fa-solid fa-bars" id="menu-btn"></div>
+        <a href="#" class="fa-solid fa-cart-shopping"></a>
+        <div id="search-btn" class="fa-solid fa-magnifying-glass"></div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- search form -->
+    <div class="search-form">
+      <div class="fas fa-times" id="close-search"></div>
+
+      <form action="">
+        <input
+          type="search"
+          id="search-box"
+          name=""
+          placeholder="search here..."
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </div>
+
+    <!-- home section starts -->
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div
+              class="box"
+              style="background: url(image/banner-2.jpg) no-repeat"
+            >
+              <div class="content">
+                <span>never stop</span>
+                <h3>exploring</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Porro laudantium natus tempora non quae eligendi officiis
+                  omnis amet deserunt expedita?
+                </p>
+                <a href="#" class="btn">get startd</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="box second"
+              style="background: url(image/banner-3.jpg) no-repeat"
+            >
+              <div class="content">
+                <span>make tour</span>
+                <h3>amazing</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Porro laudantium natus tempora non quae eligendi officiis
+                  omnis amet deserunt expedita?
+                </p>
+                <a href="#" class="btn">get startd</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="box"
+              style="background: url(image/banner-6.jpg) no-repeat"
+            >
+              <div class="content">
+                <span>explore the</span>
+                <h3>new world</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Porro laudantium natus tempora non quae eligendi officiis
+                  omnis amet deserunt expedita?
+                </p>
+                <a href="#" class="btn">get startd</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <!-- home section ends -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- js file link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
