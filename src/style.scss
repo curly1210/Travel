@@ -1,35 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
 
-*{
-  font-family: 'Poppins', sans-serif;
-  margin: 0;padding: 0;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 
- $green: #219150;
-$black:#10221b;
+$green: #219150;
+$black: #10221b;
 $white: #fff;
 $light-bg: #eee;
-$boder: .2rem solid $black;
-$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+$boder: 0.2rem solid $black;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 
 @mixin grid($val) {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($val,1fr));
-  gap:1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 1.5rem;
 }
 
 img {
-  display: block;
+  // display: block;
 }
 
 section {
   padding: 5rem 9%;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  color: $black;
 }
 
 .btn {
@@ -65,16 +73,22 @@ html {
   &::-webkit-scrollbar-thumb {
     background: $black;
   }
-
-} 
+}
 
 .header {
   position: fixed;
-  top: 0;left: 0;right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 2rem 9%;
   z-index: 1000;
   display: flex;
   align-items: center;
+
+  &.active {
+    background: $white;
+    box-shadow: $box-shadow;
+  }
 
   .logo {
     margin-right: auto;
@@ -88,7 +102,6 @@ html {
   }
 
   .navbar {
-
     a {
       margin-left: 2rem;
       font-size: 1.7rem;
@@ -121,17 +134,17 @@ html {
 
   #menu-btn {
     display: none;
-
   }
 }
 
 // search form
 .search-form {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,.8);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -158,8 +171,8 @@ html {
   form {
     width: 70rem;
     margin: 0 2rem;
-    padding-bottom: 2rem ;
-    border-bottom: .2rem solid $white;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid $white;
     display: flex;
     align-items: center;
 
@@ -173,7 +186,6 @@ html {
 
       &::placeholder {
         color: #aaa;
-
       }
     }
 
@@ -189,8 +201,7 @@ html {
   }
 }
 
-
-// home-banner 
+// home-banner
 .home {
   padding: 0;
 
@@ -218,7 +229,7 @@ html {
       h3 {
         font-size: 6rem;
         color: $green;
-        padding-top: .5rem;
+        padding-top: 0.5rem;
         text-transform: uppercase;
       }
 
@@ -228,7 +239,6 @@ html {
         font-size: 1.5rem;
         padding: 1rem 0;
       }
-
     }
   }
 }
@@ -239,19 +249,38 @@ html {
   color: $black;
 }
 
+// category
 
+.category {
+  .box-container {
+    @include grid(29rem);
 
+    .box {
+      text-align: center;
+      padding: 1rem;
 
+      img {
+        text-align: center;
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
 
+      h3 {
+        font-size: 2rem;
+        color: $green;
+      }
 
-
-
-
-
-
-
-
-
+      p {
+        font-size: 1.5rem;
+        color: $black;
+        padding: 1rem 0;
+        line-height: 2;
+      }
+    }
+  }
+}
 
 // media queries
 
@@ -266,7 +295,6 @@ html {
 }
 
 @media (max-width: 991px) {
-
   html {
     font-size: 55%;
   }
@@ -293,27 +321,27 @@ html {
 
 @media (max-width: 768px) {
   .header {
-
     #menu-btn {
       display: inline-block;
     }
 
     .navbar {
       position: fixed;
-      top: 0; left: -110%;
-      background: $white ;
+      top: 0;
+      left: -110%;
+      background: $white;
       z-index: 1000;
       width: 35rem;
       height: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center ;
+      align-items: center;
       justify-content: center;
       row-gap: 2rem;
 
       &.active {
         left: 0;
-        box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+        box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
       }
 
       a {
@@ -323,18 +351,14 @@ html {
       #nav-close {
         display: block;
         position: absolute;
-        top: 1rem; right: 1.5rem;
+        top: 1rem;
+        right: 1.5rem;
       }
     }
   }
 
   .swiper-button-next::after,
   .swiper-button-prev::after {
-  display: none;
+    display: none;
+  }
 }
-
-}
-
-
-
-
